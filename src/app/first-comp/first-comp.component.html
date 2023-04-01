@@ -1,0 +1,12 @@
+<h5>{{ data }}</h5>
+------------------------
+<h3>Pipe component</h3>
+<span
+  >Empty data:
+  <p style="font-size: medium; color: rgba(235, 138, 13, 0.836)">
+    {{ emptyVal | replaceEmptyString : isEmpty }}
+  </p></span
+>
+------------------------
+<ng-content select=".firstSelector"></ng-content>
+<ng-content select=".firstSelector1"></ng-content>
