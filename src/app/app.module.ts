@@ -8,6 +8,8 @@ import { SecondCompComponent } from './second-comp/second-comp.component';
 import { NewDirectDirective } from './new-direct.directive';
 import { NewModuleModule } from './new-module/new-module.module';
 import { ReplaceEmptyStringPipe } from './pipes/replace-empty-string.pipe';
+import { UserService } from './service/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,14 @@ import { ReplaceEmptyStringPipe } from './pipes/replace-empty-string.pipe';
     NewDirectDirective,
     ReplaceEmptyStringPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NewModuleModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    NewModuleModule,
+  ],
+  providers: [UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

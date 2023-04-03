@@ -10,3 +10,17 @@
 ------------------------
 <ng-content select=".firstSelector"></ng-content>
 <ng-content select=".firstSelector1"></ng-content>
+
+-----------------------------
+<h2>Service data list showing user name</h2>
+
+<ng-container *ngIf="serviceData.length; else noData">
+  <ol>
+    <ng-container *ngFor="let userData of serviceData">
+      <li>{{ userData.name }}</li>
+    </ng-container>
+  </ol>
+</ng-container>
+<ng-template #noData>
+  <p style="color: red">{{ errorMessage }}</p>
+</ng-template>
