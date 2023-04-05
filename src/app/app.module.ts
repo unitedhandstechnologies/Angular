@@ -10,6 +10,7 @@ import { NewModuleModule } from './new-module/new-module.module';
 import { ReplaceEmptyStringPipe } from './pipes/replace-empty-string.pipe';
 import { UserService } from './service/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     NewModuleModule,
+    BrowserAnimationsModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent],

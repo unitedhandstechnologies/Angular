@@ -1,14 +1,9 @@
-<div>
-  <h1>Comp lists ----{{ requiredData }}</h1>
-  {{ name }}
-  <input type="text" [(ngModel)]="name" #name1 />
-  <first-comp [input-data]="requiredData">
-    <ng-container class="firstSelector">
-      <second-comp #data></second-comp
-    ></ng-container>
-    <ng-container class="firstSelector1">
-      <h2>second ng content</h2>
-    </ng-container>
-  </first-comp>
-  <!-- <ng-container *ngFor="let item of listItems"></ng-container> -->
+<div style="margin: 10px 0px">
+  <h3>Page links</h3>
+  <div style="display: flex; padding: 10px; background-color: grey; gap: 10px">
+    <a [routerLink]="['/first-component']">First-component</a>
+    <a [routerLink]="['/second-component']">Second-component</a>
+  </div>
 </div>
+
+<router-outlet></router-outlet>
