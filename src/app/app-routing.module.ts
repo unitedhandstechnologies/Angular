@@ -1,30 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FirstCompComponent } from './first-comp/first-comp.component';
-import { SecondCompComponent } from './second-comp/second-comp.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { Component2Component } from './parent2/component2/component2.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'first-component',
-    pathMatch: 'full',
-  },
-  {
-    path: 'first-component',
-    component: FirstCompComponent,
-  },
-  {
-    path: 'second-component',
-    component: SecondCompComponent,
-  },
-];
+    { path: '', component: DashboardComponent },
+    { path: 'dashboard', component: Component2Component },
+  ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
-      scrollPositionRestoration: 'enabled',
-    }),
-  ],
-  exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

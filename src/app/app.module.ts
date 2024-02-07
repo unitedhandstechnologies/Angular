@@ -1,34 +1,22 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstCompComponent } from './first-comp/first-comp.component';
-import { SecondCompComponent } from './second-comp/second-comp.component';
-import { NewDirectDirective } from './new-direct.directive';
-import { NewModuleModule } from './new-module/new-module.module';
-import { ReplaceEmptyStringPipe } from './pipes/replace-empty-string.pipe';
-import { UserService } from './service/user.service';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { Parent1Module } from './parent1/parent1.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstCompComponent,
-    SecondCompComponent,
-    NewDirectDirective,
-    ReplaceEmptyStringPipe,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    FormsModule,
-    NewModuleModule,
-    BrowserAnimationsModule,
+    Parent1Module
   ],
-  providers: [UserService],
-  bootstrap: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent,]
 })
-export class AppModule {}
+export class AppModule { }
